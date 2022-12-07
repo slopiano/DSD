@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Dec  7 15:21:22 2022
+# Process ID: 12908
+# Current directory: D:/Vivado/pong/pong/pong.runs/synth_1
+# Command line: vivado.exe -log pong.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pong.tcl
+# Log file: D:/Vivado/pong/pong/pong.runs/synth_1/pong.vds
+# Journal file: D:/Vivado/pong/pong/pong.runs/synth_1\vivado.jou
+# Running On: DESKTOP-B3TH0I6, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 4, Host memory: 17044 MB
+#-----------------------------------------------------------
+source pong.tcl -notrace
