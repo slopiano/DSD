@@ -70,8 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache C:/Users/sebas/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7276-DESKTOP-B3TH0I6/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -88,7 +92,6 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   D:/Vivado/pong/pong/pong.srcs/sources_1/new/adc_if.vhd
-  D:/Vivado/pong/pong/pong.srcs/sources_1/new/adc_if2.vhd
   D:/Vivado/pong/pong/pong.srcs/sources_1/new/bat_n_ball.vhd
   D:/Vivado/pong/pong/pong.srcs/sources_1/new/clk_wiz_0.vhd
   D:/Vivado/pong/pong/pong.srcs/sources_1/new/clk_wiz_0_clk_wiz.vhd

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Dec  7 16:31:16 2022
+| Date         : Wed Dec  7 20:09:26 2022
 | Host         : DESKTOP-B3TH0I6 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file pong_methodology_drc_routed.rpt -pb pong_methodology_drc_routed.pb -rpx pong_methodology_drc_routed.rpx
 | Design       : pong
@@ -135,102 +135,102 @@ Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[10]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[11]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[3]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[4]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[5]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[6]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[7]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[8]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/data_22_reg[9]/C is not reached by a timing clock
+The clock pin adc2/data_2_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[0]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[10]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[11]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[2]_srl2/CLK is not reached by a timing clock
+The clock pin adc2/pdata2_reg[2]_srl2/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[3]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[4]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[5]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[6]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[7]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[8]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin adc2/pdata22_reg[9]/C is not reached by a timing clock
+The clock pin adc2/pdata2_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning

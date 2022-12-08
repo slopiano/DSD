@@ -44,16 +44,6 @@ ARCHITECTURE Behavioral OF pong IS
             data_2 : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
         );
     END COMPONENT;
-    COMPONENT adc_if2 IS
-        PORT (
-            SCK2 : IN STD_LOGIC;
-            SDATA12 : IN STD_LOGIC;
-            SDATA22 : IN STD_LOGIC;
-            CS2 : IN STD_LOGIC;
-            data_12 : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-            data_22 : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
-        );
-    END COMPONENT;
     COMPONENT bat_n_ball IS
         PORT (
             v_sync : IN STD_LOGIC;
@@ -115,14 +105,14 @@ BEGIN
         data_1 => OPEN, 
         data_2 => adout 
     );
-    adc2 : adc_if2
+    adc2 : adc_if
     PORT MAP(-- instantiate ADC serial to parallel interface
-        SCK2 => serial_clk,
-        CS2 => sample_clk,
-        SDATA12 => ADC_SDATA12,
-        SDATA22 => ADC_SDATA22,
-        data_12 => OPEN,
-        data_22 => adout2
+        SCK => serial_clk,
+        CS => sample_clk,
+        SDATA1 => ADC_SDATA12,
+        SDATA2 => ADC_SDATA22,
+        data_1 => OPEN,
+        data_2 => adout2
     );
     add_bb : bat_n_ball
     PORT MAP(--instantiate bat and ball component

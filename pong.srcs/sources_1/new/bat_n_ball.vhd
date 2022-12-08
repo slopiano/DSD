@@ -110,6 +110,7 @@ BEGIN
         -- allow for bounce off left or right of screen
         ELSIF ball_x <= bsize THEN -- bounce off left wall
             ball_x_motion <= ball_speed; -- set hspeed to (+ ball_speed) pixels
+            game_on <= '0';
         END IF;
         -- allow for bounce off bat
         IF (ball_x + bsize/2) >= (bat_y - bat_h) AND

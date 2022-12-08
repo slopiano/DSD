@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "pong_behav" "xil_defaultlib.pong" -log "elaborate.log" 
