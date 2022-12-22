@@ -13,7 +13,9 @@ ENTITY bat_n_ball IS
         serve : IN STD_LOGIC; -- initiates serve
         red : OUT STD_LOGIC;
         green : OUT STD_LOGIC;
-        blue : OUT STD_LOGIC
+        blue : OUT STD_LOGIC;
+        scoreCount1 : OUT STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
+        scoreCount2 : OUT STD_LOGIC_VECTOR(3 downto 0) := (others => '0')
     );
 END bat_n_ball;
 
@@ -30,6 +32,9 @@ ARCHITECTURE Behavioral OF bat_n_ball IS
     -- current ball position - intitialized to center of screen
     SIGNAL ball_x : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(400, 11);
     SIGNAL ball_y : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(300, 11);
+    SIGNAL score1 : STD_LOGIC_VECTOR(3 downto 0) := (others => '0'); -- Holds score for player 1
+    SIGNAL score2 : STD_LOGIC_VECTOR(3 downto 0) := (others => '0'); -- Holds score for player 1
+    CONSTANT score_val_max : std_logic_vector(3 downto 0) := "1001"; --9
     -- bat horizontal position
     CONSTANT bat_y : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(720, 11);
     CONSTANT bat_y2 : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(40, 11);
@@ -39,6 +44,8 @@ BEGIN
     red <= NOT bat_on; -- color setup for red ball and cyan bat on white background
     green <= NOT ball_on;
     blue <= NOT bat_on2;
+    scoreCount1 <= score1;
+    scoreCount2 <= score2;
     -- process to draw round ball
     -- set ball_on if current pixel address is covered by ball position
     balldraw : PROCESS (ball_x, ball_y, pixel_row, pixel_col) IS
@@ -103,13 +110,23 @@ BEGIN
 --            game_on <= '0'; -- and make ball disappear
         ELSIF ball_x + bsize >= 800 THEN -- Stop the ball once it hits right wall
             ball_x_motion <= (NOT ball_speed) + 1; -- set hspeed to (- ball_speed) pixels
+            if (score2 = score_val_max ) AND ( game_on = '1') then
+                score2 <= (others => '0');
+            ELSIF game_on = '1' THEN
+                score2 <= score2 + 1;
+            end if;
             game_on <= '0';
-        END IF;
+            END IF;
         IF ball_y <= bsize THEN -- bounce off top wall
             ball_y_motion <= ball_speed; -- set vspeed to (+ ball_speed) pixels
         -- allow for bounce off left or right of screen
         ELSIF ball_x <= bsize THEN -- bounce off left wall
             ball_x_motion <= ball_speed; -- set hspeed to (+ ball_speed) pixels
+            if (score1 = score_val_max ) AND ( game_on = '1') then
+                score1 <= (others => '0');
+            ELSIF game_on = '1' THEN
+                score1 <= score1 + 1;
+            end if;
             game_on <= '0';
         END IF;
         -- allow for bounce off bat
